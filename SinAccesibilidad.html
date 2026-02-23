@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html> <!-- ERROR WAVE: Falta atributo lang -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido al Visor de Actividades</title>
     <link rel="stylesheet" href="styles.css"> 
     <style>
-        /* Estilos específicos para la página de bienvenida que no están en styles.css */
         body {
-            /* Usamos propiedades de la clase .portada, pero aplicadas directamente al body */
-            /* Esto sobreescribe el body blanco base y aplica el estilo de la portada */
-            background-color: #f39f18; /* Fondo Naranja */
+            background-color: #f39f18;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -19,15 +16,14 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            color: white; /* Aseguramos texto blanco en el fondo naranja */
+            color: white;
             margin: 0;
             padding: 0;
         }
 
         .mensaje {
             padding: 30px 50px;
-            /* Fondo semi-transparente blanco para que el texto destaque */
-            background-color: rgba(255, 255, 255, 0.95); 
+            background-color: rgba(255, 255, 255, 0.95);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             max-width: 80%;
@@ -36,19 +32,38 @@
         }
 
         .mensaje h1 {
-            color: #b64172; /* Título Morado */
+            color: #b64172;
             font-size: 2.2em;
             margin-bottom: 0.5em;
         }
 
+        /* ALERTA: contraste reducido (gris claro sobre blanco) */
         .mensaje p {
             font-size: 1.1em;
             line-height: 1.6;
-            color: #333; /* Texto oscuro */
+            color: #9a9a9a;
         }
-        
+
+        /* ALERTA/posible contraste: amarillo claro sobre blanco */
         strong {
-            color: #f39f18; /* Naranja */
+            color: #ffcc00;
+        }
+
+        /* Estilos mínimos para que existan elementos interactivos */
+        .acciones {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .acciones a,
+        .acciones button {
+            background: transparent;
+            border: 2px solid rgba(0,0,0,0.2);
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: #333;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -58,21 +73,37 @@
         <p>Estás en el área de visualización de ejercicios.</p>
         <p>Para empezar, selecciona una <strong>Unidad</strong> y una <strong>Actividad</strong> en el menú lateral. </p>
         <p>¡Disfruta revisando el trabajo! ✨</p>
+
+        <div class="acciones">
+            <!-- ERROR WAVE: Enlace sin texto (solo icono / sin nombre accesible real) -->
+            <a href="#" aria-label="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg">
+                <!-- ERROR WAVE: imagen dentro de enlace sin alt -->
+            </a>
+
+            <!-- ERROR WAVE: Botón vacío (sin texto) -->
+            <button type="button"></button>
+        </div>
     </div>
 
+    <!-- ERROR WAVE: iframe sin title -->
+    <iframe src="about:blank" style="width:0;height:0;border:0;"></iframe>
+
     <ul class="bubbles">
-            <li><img src="https://i.pinimg.com/474x/25/8f/28/258f2822a81c17c0d6efa7bf6936006b.jpg" alt="Burbuja 1"></li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Rey_Mysterio_%2829081123617%29.jpg" alt="Burbuja 2"></li>
-            <li><img src="https://hips.hearstapps.com/hmg-prod/images/ronnie-coleman-1645521680.jpg" alt="Burbuja 3"></li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Pedro_S%C3%A1nchez_2020_%28portrait%29.jpg" alt="Burbuja 4"></li>
-            <li><img src="https://fundaciongirasol.es/wp-content/uploads/2021/07/tratamiento-ludopatia.jpg" alt="Burbuja 5"></li>
-            <li><img src="https://ichef.bbci.co.uk/ace/standard/1376/cpsprodpb/017d/live/8703abf0-2180-11ef-9628-ff2abcc9602e.jpg" alt="Burbuja 6"></li>
-            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSic8INwP9qdpI7XeiYtuSOKJSSPFwvQaaDEQ&s" alt="Burbuja 7"></li>
-            <li><img src="https://i.pinimg.com/originals/9f/59/d5/9f59d5715d0e971c52c83dbef627dae3.gif" alt="Burbuja 8"></li>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/250px-Flag_of_Albania.svg.png" alt="Burbuja 9"></li>
-            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQb8dusfaTyuKgn5yP_UL7MTWqcENeZ1YH4w&s" alt="Burbuja 10"></li>
-            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCaClyp6U4biuYIINqqE3gf60yR38T40FwA&s" alt="Burbuja 11"></li>
+        <!-- ERROR WAVE: imágenes sin atributo alt -->
+        <li><img src="https://i.pinimg.com/474x/25/8f/28/258f2822a81c17c0d6efa7bf6936006b.jpg"></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Rey_Mysterio_%2829081123617%29.jpg"></li>
+        <li><img src="https://hips.hearstapps.com/hmg-prod/images/ronnie-coleman-1645521680.jpg"></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Pedro_S%C3%A1nchez_2020_%28portrait%29.jpg"></li>
+        <li><img src="https://fundaciongirasol.es/wp-content/uploads/2021/07/tratamiento-ludopatia.jpg"></li>
+        <li><img src="https://ichef.bbci.co.uk/ace/standard/1376/cpsprodpb/017d/live/8703abf0-2180-11ef-9628-ff2abcc9602e.jpg"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSic8INwP9qdpI7XeiYtuSOKJSSPFwvQaaDEQ&s"></li>
+        <li><img src="https://i.pinimg.com/originals/9f/59/d5/9f59d5715d0e971c52c83dbef627dae3.gif"></li>
+        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/250px-Flag_of_Albania.svg.png"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQb8dusfaTyuKgn5yP_UL7MTWqcENeZ1YH4w&s"></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCaClyp6U4biuYIINqqE3gf60yR38T40FwA&s"></li>
     </ul>
+
     <script>
         // Función para el menú desplegable (se mantiene)
         function toggleUnidad(elemento) {
@@ -88,10 +119,9 @@
         if (bubbleContainer) {
             const bubbles = document.querySelectorAll('.bubbles li');
             
-            // Rango de tamaños (en píxeles) y velocidad (en ms)
             const MIN_SIZE = 20;
             const MAX_SIZE = 150;
-            const MIN_SPEED = 5; // Pixels por ciclo
+            const MIN_SPEED = 5;
             const MAX_SPEED = 20;
 
             function getRandom(min, max) {
@@ -106,43 +136,19 @@
                 let dy = (Math.random() > 0.5 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
                 let rotation = 0;
 
-                // Aplicar estilos iniciales
                 bubble.style.width = `${size}px`;
                 bubble.style.height = `${size}px`;
                 
-                // Función principal de animación
                 function animate() {
-                // 1. Detección de Colisión (Eje X)
-                if (x + size > bubbleContainer.clientWidth || x < 0) {
-                    dx = -dx; // Invierte dirección
-        
-                    // CORRECCIÓN CLAVE: Reposiciona la burbuja si se sale.
-                    if (x < 0) {
-                        x = 0; // Coloca la burbuja exactamente en el borde izquierdo
-                    } else if (x + size > bubbleContainer.clientWidth) {
-                        x = bubbleContainer.clientWidth - size; // Coloca la burbuja exactamente en el borde derecho
-                    }
+                    if (x + size > bubbleContainer.clientWidth || x < 0) {
+                        dx = -dx;
 
-                    // Aplica nuevo tamaño y velocidad horizontal/vertical
-                    size = getRandom(MIN_SIZE, MAX_SIZE);
-                    dx = (dx > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                    dy = (dy > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                    bubble.style.width = `${size}px`;
-                    bubble.style.height = `${size}px`;
-                    }
-    
-                    // 2. Detección de Colisión (Eje Y)
-                    if (y + size > bubbleContainer.clientHeight || y < 0) {
-                        dy = -dy; // Invierte dirección
-        
-                        // CORRECCIÓN CLAVE: Reposiciona la burbuja si se sale.
-                        if (y < 0) {
-                            y = 0; // Coloca la burbuja exactamente en el borde superior
-                        } else if (y + size > bubbleContainer.clientHeight) {
-                            y = bubbleContainer.clientHeight - size; // Coloca la burbuja exactamente en el borde inferior
+                        if (x < 0) {
+                            x = 0;
+                        } else if (x + size > bubbleContainer.clientWidth) {
+                            x = bubbleContainer.clientWidth - size;
                         }
 
-                        // Aplica nuevo tamaño y velocidad horizontal/vertical
                         size = getRandom(MIN_SIZE, MAX_SIZE);
                         dx = (dx > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
                         dy = (dy > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
@@ -150,17 +156,30 @@
                         bubble.style.height = `${size}px`;
                     }
 
-                    // 3. Mover la burbuja
+                    if (y + size > bubbleContainer.clientHeight || y < 0) {
+                        dy = -dy;
+
+                        if (y < 0) {
+                            y = 0;
+                        } else if (y + size > bubbleContainer.clientHeight) {
+                            y = bubbleContainer.clientHeight - size;
+                        }
+
+                        size = getRandom(MIN_SIZE, MAX_SIZE);
+                        dx = (dx > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
+                        dy = (dy > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
+                        bubble.style.width = `${size}px`;
+                        bubble.style.height = `${size}px`;
+                    }
+
                     x += dx;
                     y += dy;
                     rotation += dx * 2; 
 
                     bubble.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
-
                     requestAnimationFrame(animate);
                 }
 
-                // Iniciar la animación
                 requestAnimationFrame(animate);
             });
         }
