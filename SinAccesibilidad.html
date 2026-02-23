@@ -1,188 +1,100 @@
 <!DOCTYPE html>
-<html> <!-- ERROR WAVE: Falta atributo lang -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido al Visor de Actividades</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-        body {
-            background-color: #f39f18;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        .mensaje {
-            padding: 30px 50px;
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            max-width: 80%;
-            z-index: 10;
-            position: relative;
-        }
-
-        .mensaje h1 {
-            color: #b64172;
-            font-size: 2.2em;
-            margin-bottom: 0.5em;
-        }
-
-        /* ALERTA: contraste reducido (gris claro sobre blanco) */
-        .mensaje p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #9a9a9a;
-        }
-
-        /* ALERTA/posible contraste: amarillo claro sobre blanco */
-        strong {
-            color: #ffcc00;
-        }
-
-        /* Estilos mínimos para que existan elementos interactivos */
-        .acciones {
-            margin-top: 16px;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-        .acciones a,
-        .acciones button {
-            background: transparent;
-            border: 2px solid rgba(0,0,0,0.2);
-            padding: 8px 12px;
-            border-radius: 6px;
-            color: #333;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda Express</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#fff;
+      color:#aaa; /* contraste pobre */
+    }
+    header{
+      background:#ffcc00; /* amarillo claro */
+      padding:14px 18px;
+    }
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#fff; /* blanco sobre amarillo (contraste bajo) */
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-right:10px;
+      padding:6px 8px;
+      border:1px solid rgba(255,255,255,.35);
+    }
+    .hero{
+      padding:18px;
+    }
+    .card{
+      border:1px solid #eee;
+      padding:12px;
+      margin:12px 18px;
+    }
+    .price{
+      color:#ffcc00; /* contraste pobre sobre blanco */
+      font-weight:bold;
+    }
+    input{
+      border:1px solid #ddd;
+      padding:8px;
+      width:100%;
+      max-width:380px;
+    }
+    button{
+      margin-top:10px;
+      padding:10px 14px;
+      background:#ffcc00;
+      border:0;
+      color:#fff; /* contraste pobre */
+      cursor:pointer;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="mensaje">
-        <h1>👋 ¡Hola! Bienvenido al Visor de Actividades</h1>
-        <p>Estás en el área de visualización de ejercicios.</p>
-        <p>Para empezar, selecciona una <strong>Unidad</strong> y una <strong>Actividad</strong> en el menú lateral. </p>
-        <p>¡Disfruta revisando el trabajo! ✨</p>
+  <!-- ERROR: sin lang en <html> -->
+  <header>
+    <div class="logo">Tienda Express</div>
 
-        <div class="acciones">
-            <!-- ERROR WAVE: Enlace sin texto (solo icono / sin nombre accesible real) -->
-            <a href="#" aria-label="">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg">
-                <!-- ERROR WAVE: imagen dentro de enlace sin alt -->
-            </a>
+    <nav>
+      <!-- ERROR: enlaces sin texto accesible (solo icono) -->
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Octicons-home.svg" width="18"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Octicons-search.svg" width="18"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Octicons-cart.svg" width="18"></a>
+    </nav>
+  </header>
 
-            <!-- ERROR WAVE: Botón vacío (sin texto) -->
-            <button type="button"></button>
-        </div>
-    </div>
+  <div class="hero">
+    <!-- ALERTA: saltarse niveles (H3 sin H1) -->
+    <h3>Ofertas de hoy</h3>
+    <p>Compra rápido, paga rápido.</p>
 
-    <!-- ERROR WAVE: iframe sin title -->
-    <iframe src="about:blank" style="width:0;height:0;border:0;"></iframe>
+    <!-- ERROR: iframe sin title -->
+    <iframe src="about:blank" style="width:100%;height:90px;border:1px solid #eee;"></iframe>
+  </div>
 
-    <ul class="bubbles">
-        <!-- ERROR WAVE: imágenes sin atributo alt -->
-        <li><img src="https://i.pinimg.com/474x/25/8f/28/258f2822a81c17c0d6efa7bf6936006b.jpg"></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Rey_Mysterio_%2829081123617%29.jpg"></li>
-        <li><img src="https://hips.hearstapps.com/hmg-prod/images/ronnie-coleman-1645521680.jpg"></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Pedro_S%C3%A1nchez_2020_%28portrait%29.jpg"></li>
-        <li><img src="https://fundaciongirasol.es/wp-content/uploads/2021/07/tratamiento-ludopatia.jpg"></li>
-        <li><img src="https://ichef.bbci.co.uk/ace/standard/1376/cpsprodpb/017d/live/8703abf0-2180-11ef-9628-ff2abcc9602e.jpg"></li>
-        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSic8INwP9qdpI7XeiYtuSOKJSSPFwvQaaDEQ&s"></li>
-        <li><img src="https://i.pinimg.com/originals/9f/59/d5/9f59d5715d0e971c52c83dbef627dae3.gif"></li>
-        <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/250px-Flag_of_Albania.svg.png"></li>
-        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQb8dusfaTyuKgn5yP_UL7MTWqcENeZ1YH4w&s"></li>
-        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXCaClyp6U4biuYIINqqE3gf60yR38T40FwA&s"></li>
-    </ul>
+  <div class="card">
+    <!-- ERROR: imagen sin alt -->
+    <img src="https://picsum.photos/seed/producto1/640/360" width="100%">
 
-    <script>
-        // Función para el menú desplegable (se mantiene)
-        function toggleUnidad(elemento) {
-            elemento.classList.toggle('abierto');
-            const lista = elemento.nextElementSibling; 
-            if (lista && lista.classList.contains('actividades-lista')) {
-                lista.classList.toggle('activo');
-            }
-        }
+    <p>Producto sorpresa</p>
+    <p class="price">9,99 €</p>
 
-        // --- CÓDIGO PARA LAS BURBUJAS REBOTANTES ---
-        const bubbleContainer = document.querySelector('.bubbles');
-        if (bubbleContainer) {
-            const bubbles = document.querySelectorAll('.bubbles li');
-            
-            const MIN_SIZE = 20;
-            const MAX_SIZE = 150;
-            const MIN_SPEED = 5;
-            const MAX_SPEED = 20;
+    <!-- ERROR: input sin label -->
+    <input type="email" placeholder="Email para recibir ofertas">
 
-            function getRandom(min, max) {
-                return Math.floor(Math.random() * (max - min + 1)) + min;
-            }
+    <!-- ERROR: botón sin nombre accesible (vacío) -->
+    <button></button>
+  </div>
 
-            bubbles.forEach(bubble => {
-                let size = getRandom(MIN_SIZE, MAX_SIZE);
-                let x = getRandom(0, bubbleContainer.clientWidth - size);
-                let y = getRandom(0, bubbleContainer.clientHeight - size);
-                let dx = (Math.random() > 0.5 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                let dy = (Math.random() > 0.5 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                let rotation = 0;
-
-                bubble.style.width = `${size}px`;
-                bubble.style.height = `${size}px`;
-                
-                function animate() {
-                    if (x + size > bubbleContainer.clientWidth || x < 0) {
-                        dx = -dx;
-
-                        if (x < 0) {
-                            x = 0;
-                        } else if (x + size > bubbleContainer.clientWidth) {
-                            x = bubbleContainer.clientWidth - size;
-                        }
-
-                        size = getRandom(MIN_SIZE, MAX_SIZE);
-                        dx = (dx > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                        dy = (dy > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                        bubble.style.width = `${size}px`;
-                        bubble.style.height = `${size}px`;
-                    }
-
-                    if (y + size > bubbleContainer.clientHeight || y < 0) {
-                        dy = -dy;
-
-                        if (y < 0) {
-                            y = 0;
-                        } else if (y + size > bubbleContainer.clientHeight) {
-                            y = bubbleContainer.clientHeight - size;
-                        }
-
-                        size = getRandom(MIN_SIZE, MAX_SIZE);
-                        dx = (dx > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                        dy = (dy > 0 ? 1 : -1) * getRandom(MIN_SPEED, MAX_SPEED) * 0.1;
-                        bubble.style.width = `${size}px`;
-                        bubble.style.height = `${size}px`;
-                    }
-
-                    x += dx;
-                    y += dy;
-                    rotation += dx * 2; 
-
-                    bubble.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
-                    requestAnimationFrame(animate);
-                }
-
-                requestAnimationFrame(animate);
-            });
-        }
-    </script>
+  <!-- ERROR: enlace genérico "click aquí" -->
+  <p style="margin:18px;">
+    Para ver condiciones <a href="#">click aquí</a>.
+  </p>
 </body>
 </html>
